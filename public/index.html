@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MovieSearch</title>
+  <!-- Load icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/search/search.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id="page-1">
+    <nav>
+      <a onclick="showFavorites()">Favorites</a>
+    </nav>
+    <h1 class="title">Search Movies</h1>
+    <form class="searchForm">
+      <input type="text" placeholder="Search.." name="searchForm-input" class="searchForm-input">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+    <section class="searchResults row"></section>
+  </div>
+  <div id="page-2">
+    <nav>
+      <a onclick="showSearch()">Back</a>
+      <a onclick="showFavorites()">Favorites</a>
+    </nav>
+    <section class="movieDetail"></section>
+  </div>
+  <div id="page-3">
+    <nav>
+      <a onclick="showSearch()">Back</a>
+    </nav>
+    <h1 class="title">Favorites</h1>
+  </div>
+
+  <script src="/index.js"></script>
+  <script> showSearch(); </script>
+  <script src="/search/search.js"></script>
+
+</body>
+</html>
