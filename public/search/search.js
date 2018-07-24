@@ -10,7 +10,7 @@ function handleSubmit(event) {
 }
 
 function fetchMovies(searchQuery) {
-  const endpoint = encodeURI(`http://www.omdbapi.com/?i=tt3896198&apikey=cab3fbdd&s=${searchQuery}`);
+  const endpoint = encodeURI(`https://www.omdbapi.com/?i=tt3896198&apikey=cab3fbdd&s=${searchQuery}`);
   fetch(endpoint)
     .then(response => response.json())
     .then(data => {
@@ -28,7 +28,7 @@ function displayMovies(movies) {
 
   // Loop over results array
   movies.forEach(movie => {
-   const url = encodeURI(`http://www.omdbapi.com/?i=tt3896198&apikey=cab3fbdd&t=${movie.Title}`);
+   const url = encodeURI(`https://www.omdbapi.com/?i=tt3896198&apikey=cab3fbdd&t=${movie.Title}`);
    let posterURL = encodeURI(`images/NoImage.png`);
 
    if (movie.Poster != "N/A") {
@@ -47,7 +47,7 @@ function displayMovies(movies) {
 }
 
 function fetchMovie(title) {
-  const endpoint = encodeURI(`http://www.omdbapi.com/?i=tt3896198&apikey=cab3fbdd&t=${title}`);
+  const endpoint = encodeURI(`https://www.omdbapi.com/?i=tt3896198&apikey=cab3fbdd&t=${title}`);
   fetch(endpoint)
     .then(response => response.json())
     .then(data => {
